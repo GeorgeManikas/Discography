@@ -6,7 +6,10 @@ const AlbumState = ({ children }) => {
   const initialState = {
     albums: null,
     artist : null,
-    currentArtist: "",
+    currentArtist: { 
+      albums : [],
+      tracks :[]
+    },
     currentImage:""
   };
 

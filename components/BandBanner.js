@@ -7,8 +7,8 @@ export default function BandBanner() {
   const { currentArtist } = value;
   const { strArtistThumb, strArtistLogo } = currentArtist;
   return (
-    <Box style={{ width: "90%" }} textAlign="left" justify="start">
-      <img src={`${strArtistLogo}`} alt={`${strArtistThumb}`} />
+    <Box  textAlign="left" justify="center" alignItems="center">
+      <img src={`${strArtistLogo}`} alt={`${strArtistThumb}`} style={{ width:'100%', objectFit:'cover' }} />
     </Box>
   );
 }

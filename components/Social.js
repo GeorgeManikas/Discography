@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const Social = ({ facebook, twitter, website }) => {
   const classes = useStyles();
   return (
-    <Box display="flex" justifyContent="flex-start">
+    <Box   justify="center" alignItems="center" >
       <ButtonGroup>
         {/* <pre>{JSON.stringify(Facebook, null, 4)} </pre> */}
         <Button

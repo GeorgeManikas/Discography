@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import AlbumContext from "../context/AlbumContext";
-import { FETCH_ARTIST, CURRENT_ARTIST } from "../context/types";
+import {  CURRENT_ARTIST } from "../context/types";
 import {
   List,
   ListItemAvatar,
@@ -11,13 +11,14 @@ import {
   Grid,
   Tabs,
   Tab,
-  AppBar,
   Paper
 } from "@material-ui/core";
 import ArtistNotFound from "./ArtistNotFound";
 import Social from "./Social";
+import AlbumList from './AlbumList'
 import TabItem from "./TabItem";
 import BandDescription from "./BandDescription";
+import { Album, MenuBook, PhotoCamera } from "@material-ui/icons";
 
 const ArtistList = ({ artistList }) => {
   const [artistFound, setArtistFound] = useState(true);
@@ -50,9 +51,9 @@ const ArtistList = ({ artistList }) => {
               <List component="nav">
                 {artistList.map((artist) => (
                   <ListItem
+                    key={artist.idArtist}
                     button
                     selected={currentIndex === artist.idArtist}
-                    key={artist.idArtist}
                     onClick={(e) => handleClick(e, artist)}
                   >
                     <ListItemAvatar>
@@ -75,8 +76,9 @@ const ArtistList = ({ artistList }) => {
                   indicatorColor="primary"
                   textColor="primary"
                 >
-                  <Tab label="band info" />
-                  <Tab label="discography" />
+                  <Tab label="band info" icon={<MenuBook />} />
+                  <Tab label="discography" icon={<Album /> } />
+                  <Tab label="photos" icon={<PhotoCamera /> } /> 
                 </Tabs>
               </Paper>
             </Grid>
@@ -89,6 +91,11 @@ const ArtistList = ({ artistList }) => {
                   website={currentArtist.strWebsite}
                 />
                 <BandDescription />
+              </TabItem>
+
+              {/* 2nd TAB DISCOGRAPHY  */}
+              <TabItem value={tabValue} index={1}>
+                  <AlbumList /> 
               </TabItem>
             </Grid>
 
