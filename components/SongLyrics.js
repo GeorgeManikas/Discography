@@ -1,10 +1,15 @@
-import { Box, Typography } from '@material-ui/core'
+import { Box, Button, Typography } from '@material-ui/core'
 import React from 'react'
 import VideoList from './VideoList'
+import { useRouter } from 'next/router'
 
 const SongLyrics = ({ lyrics, artist, title, videos  }) => {
+
+    const router = useRouter()
+
     return (
         <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" style={{ marginTop:'3em'}}>
+            <Button variant="contained" color="primary" onClick={()=> router.back()}> back...</Button>
            <Box display="block">
                <Typography variant="h6" style={{padding:'1em', textTransform:'capitalize'}}> 
                <span>{artist} </span>

@@ -21,6 +21,46 @@ const theme = createMuiTheme({
       main: "#eee"
     }
   },
+  overrides:{
+    MuiCard:{
+      root:{
+        height:'300px'
+      }
+    },
+    MuiCardHeader:{
+      root:{
+        background: blue[900],
+        color:'white',
+        height:'auto',
+        padding:'1.7em',
+        
+      },
+      title:{
+        marginTop:'0.4em',
+        fontSize:'1.4em',
+        textOverflow:'hidden'
+        
+      }
+    },
+    MuiIconButton:{
+      root:{
+        fontSize:'4em'
+      }
+    },
+    MuiContainer:{
+      root:{
+        width: '100vw !important',
+      },
+      maxWidthXl:{
+        width:'100vw'
+      }
+    },
+    MuiBottomNavigation:{
+      root:{
+        marginTop:'6em'
+      }
+    }
+  }
 
 });
 

@@ -18,6 +18,7 @@ import Social from "./Social";
 import AlbumList from './AlbumList'
 import TabItem from "./TabItem";
 import BandDescription from "./BandDescription";
+import Photos from './Photos'
 import { Album, MenuBook, PhotoCamera } from "@material-ui/icons";
 
 const ArtistList = ({ artistList }) => {
@@ -97,8 +98,12 @@ const ArtistList = ({ artistList }) => {
               <TabItem value={tabValue} index={1}>
                   <AlbumList /> 
               </TabItem>
-            </Grid>
 
+             {/* 3rd TAB PHOTOS  */}
+              <TabItem value={tabValue} index={2}>
+                <Photos /> 
+              </TabItem>
+            </Grid>
             {/* <pre> {JSON.stringify(artistList, null,4)} </pre> */}
           </Grid>
         </Box>

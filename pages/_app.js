@@ -8,6 +8,7 @@ import MenuBar from "../components/MenuBar";
 import AlbumState from "../context/AlbumState";
 import Router from "next/router";
 import Loader from "../components/Loader";
+import Footer from "../components/Footer";
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
@@ -55,7 +56,7 @@ export default function MyApp(props) {
           <ThemeProvider theme={theme}>
             <MenuBar />
             {loading ? <Loader />  : <Component {...pageProps} />}
-            
+            <Footer /> 
           </ThemeProvider>
         </CssBaseline>
       </AlbumState>

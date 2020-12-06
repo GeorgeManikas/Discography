@@ -18,7 +18,8 @@ export default function BandDescription() {
         <Typography variant="caption"> Style : {currentArtist.strStyle} </Typography> 
       </Box>
       <Divider /> 
-      <Typography variant="caption" textAlign="center">{currentArtist.strBiographyEN}</Typography>
+      <Typography variant="caption" textAlign="center" style={{marginBottom:'2em'}}>{currentArtist.strBiographyEN}</Typography>
+      <Divider /> 
     </Box>
   );
 }
